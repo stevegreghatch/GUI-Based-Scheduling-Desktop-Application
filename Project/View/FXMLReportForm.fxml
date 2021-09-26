@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<VBox fx:controller="Controller.ReportForm"
+      maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <RadioButton layoutX="511.0" layoutY="21.0" mnemonicParsing="false" onAction="#radioToCustomerFormScene" text="Customer Form">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="formControlToggleGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton layoutX="647.0" layoutY="21.0" mnemonicParsing="false" onAction="#radioToAppointmentFormScene" text="Appointment Form" toggleGroup="$formControlToggleGroup" />
+                <RadioButton layoutX="798.0" layoutY="21.0" mnemonicParsing="false" selected="true" text="Report Form" toggleGroup="$formControlToggleGroup" />
+                <TabPane layoutX="11.0" layoutY="78.0" prefHeight="395.0" prefWidth="878.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="customerAppointmentsTab" onSelectionChanged="#populateTotalCustomerAppointments" text="Total Customer Appointments">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="878.0">
+                                    <children>
+                                        <TableView fx:id="customerAppointmentsTypeTableView" layoutX="108.0" layoutY="40.0" prefHeight="320.0" prefWidth="293.0">
+                                            <columns>
+                                                <TableColumn fx:id="customerAppointmentsTypeCol" prefWidth="161.0" text="Appointment Type" />
+                                                <TableColumn fx:id="customerAppointmentsTotalTypeCol" prefWidth="115.0" text="Total" />
+                                            </columns>
+                                        </TableView>
+                                        <TableView fx:id="customerAppointmentsMonthTableView" layoutX="499.0" layoutY="41.0" prefHeight="319.0" prefWidth="271.0">
+                                            <columns>
+                                                <TableColumn fx:id="customerAppointmentsMonthCol" prefWidth="181.0" text="Appointment Month" />
+                                                <TableColumn fx:id="customerAppointmentsTotalMonthCol" prefWidth="81.0" text="Total" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="contactAppointmentsTab" onSelectionChanged="#populateAppointmentsByContact" text="Appointments by Contact Name">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TableView fx:id="contactAppointmentsTableView" layoutY="41.0" prefHeight="324.0" prefWidth="878.0">
+                                            <columns>
+                                                <TableColumn fx:id="contactAppointmentsIDCol" prefWidth="97.0" text="Appointment ID" />
+                                                <TableColumn fx:id="contactAppointmentsTitleCol" prefWidth="185.0" text="Appointment Title" />
+                                                <TableColumn fx:id="contactAppointmentTypeCol" prefWidth="115.0" text="Appointment Type" />
+                                                <TableColumn fx:id="contactAppointmentsDescriptionCol" prefWidth="160.0" text="Appointment Description" />
+                                                <TableColumn fx:id="contactAppointmentsStartDateAndTimeCol" prefWidth="119.0" text="Start Date and Time" />
+                                                <TableColumn fx:id="contactAppointmentsEndDateAndTimeCol" prefWidth="111.0" text="End Date and Time" />
+                                                <TableColumn fx:id="contactAppointmentsCustomerIDCol" prefWidth="76.0" text="Customer ID" />
+                                            </columns>
+                                        </TableView>
+                                        <ComboBox fx:id="contactComboBox" focusTraversable="false" layoutX="56.0" layoutY="8.0" onAction="#getSpecificContactAppointmentData" prefWidth="150.0" promptText="select contact" />
+                                        <Label fx:id="contactLabel" layoutY="12.0" text="Contact:" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="customerFirstLevelDivisionTab" onSelectionChanged="#populateCustomersByFirstLevelDivision" text="Customers by First-Level Division">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TableView fx:id="customerFirstLevelDivisionTableView" layoutX="12.0" layoutY="45.0" prefHeight="288.0" prefWidth="859.0">
+                                            <columns>
+                                                <TableColumn fx:id="firstLevelDivisionCol" prefWidth="255.0" text="First-Level Division" />
+                                                <TableColumn fx:id="customerListCol" prefWidth="594.0" text="Customers" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
