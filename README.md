@@ -13,13 +13,11 @@ REQUIREMENTS
     You must use "test" as the username and password to login to your application.
 
     A.  Create a GUI-based application for the company in the scenario. Regarding your file submission—the use of non-Java API libraries are not allowed with the exception of JavaFX SDK and MySQL JDBC Driver.
-
         A1.  Create a log-in form with the following capabilities:
             a.  Accepts a user ID and password and provides an appropriate error message
             b.  Determines the user’s location (i.e., ZoneId) and displays it in a label on the log-in form
             c.  Displays the log-in form in English or French based on the user’s computer language setting to translate all the text, labels, buttons, and errors on the form
             d.  Automatically translates error control messages into English or French based on the user’s computer language setting
-
         A2.  Write code that provides the following customer record functionalities:
             a.  Customer records and appointments can be added, updated, and deleted. When deleting a customer record, all of the customer’s appointments must be deleted first, due to foreign key constraints.
             b.  When adding and updating a customer, text fields are used to collect the following data: customer name, address, postal code, and phone number. Customer IDs are auto-generated, and first-level division (i.e., states, provinces) and country data are collected using separate combo boxes. _Note: The address text field should not include first-level division and country data. Please use the following examples to format addresses: U.S. address: 123 ABC Street, White Plains. Canadian address: 123 ABC Street, Newmarket. UK address: 123 ABC Street, Greenwich, London. When updating a customer, the customer data autopopulates in the form._
@@ -28,7 +26,6 @@ REQUIREMENTS
             e.  All of the fields can be updated except for Customer_ID.
             f.  Customer data is displayed using a TableView, including first-level division data. A list of all the customers and their information may be viewed in a TableView, and updates of the data can be performed in text fields on the form.
             g.  When a customer record is deleted, a custom message should display in the user interface.
-
         A3.  Add scheduling functionalities to the GUI-based application by doing the following: 
             a.  Write code that enables the user to add, update, and delete appointments. The code should also include the following functionalities:
                 1.  A contact name is assigned to an appointment using a drop-down menu or combo box.
