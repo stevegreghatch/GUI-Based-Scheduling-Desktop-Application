@@ -1,5 +1,4 @@
-# WGU-C195
-Software II - Advanced Java Concepts - Performance Assessment
+# Software II - Advanced Java Concepts - Performance Assessment
 
 SCENARIO
 
