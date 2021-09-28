@@ -9,14 +9,14 @@ public class DBConnection {
     private static final String protocol = "jdbc";
     private static final String vendorName = ":mysql:";
     private static final String ipAddress = "//wgudb.ucertify.com:3306/";
-    private static final String dbName = "WJ07wzi";
+    private static final String dbName = "--";
     //JDBC URL
     private static final String jdbcURL = protocol + vendorName + ipAddress + dbName;
     //driver and connection interface
     private static final String MYSQLJDBCDriver = "com.mysql.cj.jdbc.Driver";
     private static Connection conn = null;
-    private static final String username = "U07wzi";
-    private static final String password = "53689155419";
+    private static final String username = "--";
+    private static final String password = "--";
 
     /**
      *
